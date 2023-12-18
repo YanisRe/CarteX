@@ -11,6 +11,7 @@ if ($mysqli->connect_error) {
 }
 
 $username = $_POST['username'];
+$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 $role = $_POST['role'];
 
 $query = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
