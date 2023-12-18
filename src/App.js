@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ListeCarte from './pages/Listecarte';
+import DetailCarte from './pages/DetailCarte';
+import PageAjouterCarte from './pages/PageAjouterCarte';
 
 function test () {
   console.log('test');
