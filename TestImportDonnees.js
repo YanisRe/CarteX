@@ -1,6 +1,5 @@
 const axios = require("axios");
 const mysql = require("mysql");
-
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -10,12 +9,12 @@ const connection = mysql.createConnection({
 
 connection.connect();
 
-const apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
+const apiUrl = "https://db.ygoprodeck.com/api/v7/cardinfo.php?language=fr";
 
 const fetchAndStoreData = async () => {
   try {
     const response = await axios.get(apiUrl);
-    const cards = response.data.data.slice(0, 707);
+    const cards = response.data.data.slice(0, 300);
 
     cards.forEach(async (card) => {
       const { name, desc, card_images } = card;

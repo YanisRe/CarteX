@@ -12,10 +12,10 @@ function App() {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php');
+        const response = await axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?language=fr");
         setCards(response.data)
       } catch (error) {
-        console.error('Erreur lors de la récupération des cartes :', error);
+        console.error("Erreur lors de la récupération des cartes :", error);
       }
     };
 
