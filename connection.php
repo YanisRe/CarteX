@@ -6,7 +6,7 @@ $database = "cartex";
 $mysqli = new mysqli($host, $user, $password, $database);
 
 if ($mysqli->connect_error) {
-    die("Échec de la connexion à la base de données: " . $mysqli->connect_error);
+    die("Échec de la connexion à la BDD " . $mysqli->connect_error);
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];

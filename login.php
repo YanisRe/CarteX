@@ -7,7 +7,7 @@ $database = "cartex";
 $mysqli = new mysqli($host, $user, $password, $database);
 
 if ($mysqli->connect_error) {
-    die("Échec de la connexion à la base de données: " . $mysqli->connect_error);
+    die("Échec de la connexion à la BDD" . $mysqli->connect_error);
 }
 
 $username = $_POST['username'];
@@ -22,8 +22,17 @@ if ($stmt) {
     $stmt->execute();
     $stmt->close();
 } else {
-    echo "Erreur dans la préparation de la requête: " . $mysqli->error;
+    echo "Erreur" . $mysqli->error;
 }
-
+if ($stmt->execute()) {
+    session_start();
+    $_SESSION['username'] = $username;
+    $_SESSION['role'] = $role;
+    header("Location: admin.php");
+    exit();
+} else {
+    echo "Erreur" . $stmt->error;
+}
+            
 $mysqli->close();
 ?>
