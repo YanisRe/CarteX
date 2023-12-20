@@ -22,7 +22,7 @@ app.get("/api/cartes", (req, res) => {
   const query = "SELECT * FROM carte";
   connection.query(query, (error, results) => {
     if (error) {
-      console.error("Erreur lors de la récupération des données depuis la base de données :", error);
+      console.error("Erreur lors de la récupération des données depuis la BDD :", error);
       res.status(500).send("Erreur serveur");
     } else {
       res.json(results);
