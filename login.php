@@ -23,16 +23,6 @@ if ($stmt) {
     $stmt->close();
 } else {
     echo "Erreur" . $mysqli->error;
-}
-if ($stmt->execute()) {
-    session_start();
-    $_SESSION['username'] = $username;
-    $_SESSION['role'] = $role;
-    header("Location: admin.php");
-    exit();
-} else {
-    echo "Erreur" . $stmt->error;
-}
-            
+}           
 $mysqli->close();
 ?>

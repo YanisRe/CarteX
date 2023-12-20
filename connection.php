@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user = $result->fetch_assoc();
 
             if (password_verify($password, $user['password'])) {
-                echo "Connexion réussie!";
+                echo "Connexion réussie";
             } else {
                 echo "Nom d'utilisateur ou mot de passe incorrect.";
             }
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         $stmt->close();
     } else {
-        echo "Erreur dans la préparation de la requête: " . $mysqli->error;
+        echo "Erreur" . $mysqli->error;
     }
 }
 
