@@ -29,7 +29,3 @@ app.get("/api/cartes", (req, res) => {
     }
   });
 });
-
-app.listen(port, () => {
-  console.log("Serveur en écoute !");
-});
