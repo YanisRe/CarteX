@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Connexion</h2>
-        <form action="login.php" method="post">
+        <h2>Inscription</h2>
+        <form action="signin.php" method="post">
             <label for="username">Nom d'utilisateur:</label>
             <input type="text" id="username" name="username" required>
 
@@ -19,10 +19,17 @@
             <label for="role">Role:</label>
             <select id="role" name="role" required>
                 <option value="user">Utilisateur</option>
+                <option value="admin">Administrateur</option>
             </select>
 
-            <button type="submit">Se connecter</button>
+            <button type="submit">S'inscrire</button>
         </form>
+        
+        <div class="register-link">
+            <div class="register-link">
+                <p>Vous avez déja un compte ? <a href="connection.html">Se connecter</a></p>
+            </div>
+        </div>
     </div>
 </body>
-</html>     
+</html>

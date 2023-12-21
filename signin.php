@@ -7,7 +7,7 @@ $database = "cartex";
 $mysqli = new mysqli($host, $user, $password, $database);
 
 if ($mysqli->connect_error) {
-    die("Échec de la connexion à la BDD" . $mysqli->connect_error);
+    die("Échec de la connexion à la base de données: " . $mysqli->connect_error);
 }
 
 $username = $_POST['username'];
@@ -22,7 +22,8 @@ if ($stmt) {
     $stmt->execute();
     $stmt->close();
 } else {
-    echo "Erreur" . $mysqli->error;
-}           
+    echo "Erreur dans la préparation de la requête: " . $mysqli->error;
+}
+
 $mysqli->close();
 ?>
