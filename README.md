@@ -7,3 +7,4 @@ DB_USERNAME=
 DB_PASSWORD=
 
 Les identifiants du compte admin sont user=Yanis mdp=yanis
+Le nom du fichier ayant permit le remplissage de la BDD via l'API est TestImportDonnees.js
