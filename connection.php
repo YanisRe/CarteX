@@ -6,7 +6,7 @@ $database = "cartex";
 $mysqli = new mysqli($host, $user, $password, $database);
 
 if ($mysqli->connect_error) {
-    die("Échec de la connexion à la BDD " . $mysqli->connect_error);
+    die("Échec de la connexion à la base de données: " . $mysqli->connect_error);
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user = $result->fetch_assoc();
 
             if (password_verify($password, $user['password'])) {
-                echo "Connexion réussie";
+                echo "Connexion réussie!";
             } else {
                 echo "Nom d'utilisateur ou mot de passe incorrect.";
             }
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         $stmt->close();
     } else {
-        echo "Erreur" . $mysqli->error;
+        echo "Erreur dans la préparation de la requête: " . $mysqli->error;
     }
 }
 
