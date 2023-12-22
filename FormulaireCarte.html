@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une carte</title>
+    <link rel="stylesheet" href="FormulaireCarte.css">
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une carte</title>
+    <link rel="stylesheet" href="FormulaireCarte.css">
+</head>
+
+<video autoplay muted loop id="video-background">
+    <source src="labrynth.mp4" type="video/mp4">
+</video>
+
+
+<body>
+<form action="FormulaireCarte.php" method="POST">
+    <label for="card_id">ID de la carte :</label>
+    <input type="text" name="card_id" required>
+
+    <label for="card_name">Nom de la carte :</label>
+    <input type="text" name="card_name" required>
+
+    <label for="card_description">Description :</label>
+    <textarea name="card_description" required></textarea>
+
+    <label for="image_url">URL de l'image :</label>
+    <input type="text" name="image_url" required>
+
+    <label for="card_price">Prix :</label>
+    <input type="text" name="card_price" required>
+
+    <label for="rarity">Rareté :</label>
+    <input type="text" name="rarity" required>
+
+    <label for="is_banned">Carte bannie :</label>
+    <select name="is_banned" required>
+        <option value="0">Non</option>
+        <option value="1">Oui</option>
+    </select>
+
+    <button type="submit">Ajouter la carte</button>
+  
+    
+</form>
+  
+</script>
+</body>
+</html>
